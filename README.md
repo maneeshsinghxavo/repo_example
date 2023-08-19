@@ -25,3 +25,6 @@ INFO: Elapsed time: 2.172s, Critical Path: 0.07s
 INFO: 4 processes: 4 internal.
 INFO: Build completed successfully, 4 total actions
 
+
+you can also refer 
+bazel build @manish_repo//:book_py_proto
