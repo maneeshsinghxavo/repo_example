@@ -28,3 +28,5 @@ INFO: Build completed successfully, 4 total actions
 
 you can also refer 
 bazel build @manish_repo//:book_py_proto
+
+bazel run //:test_book
