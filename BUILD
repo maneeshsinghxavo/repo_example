@@ -9,9 +9,15 @@ filegroup(
     visibility = ["//visibility:public"],
 )
 
+# py_proto_library(
+#     name = "book_py_proto",
+#     srcs = ["@manish_repo//:book_proto"],
+#     visibility = ["//visibility:public"],
+# )
+
 py_proto_library(
     name = "book_py_proto",
-    srcs = ["@manish_repo//:book_proto"],
+    srcs = [":book_proto"],
     visibility = ["//visibility:public"],
 )
 
@@ -19,4 +25,12 @@ py_proto_library(
 sh_binary(
     name = "hello",
     srcs = ["@manish_repo//:hello"],
+)
+
+py_binary(
+    name = "test_book",
+    srcs = ["test_book.py"],
+    data = [
+        ":book_py_proto",  # a py_library
+    ],
 )
